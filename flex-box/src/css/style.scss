@@ -210,15 +210,17 @@
   box-shadow: 0 1px 6px rgba(32, 33, 36, 0.238);
 }
 
+.c-image-container {
+  display: flex;
+  width: 100%;
+  overflow-x: scroll;
+}
+
 .c-image-viewer {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  overflow-x: scroll; // うまくスクロールさせられなかった
 }
 
 .c-image-viewer__item {
-  display: inline-block;
   background-color: gray;
   height: 150px;
   width: 100px;
