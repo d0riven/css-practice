@@ -1,0 +1,173 @@
+/* CSSの宣言の仕方は直しようが多いのでメモ
+1. header mainvisual about bicycle などの大要素はIDを使う
+2. 大要素ごとにコメントでしっかりと定義を分けて宣言
+3. 大要素は必ずCSSセレクタの中に含める(classだけ書くとかしない)
+4. PCベース or SPベースに合わせて、最後に差分の分だけ変えるように最低限の宣言だけする
+ */
+
+/* 共通 */
+body {
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+}
+
+header > div {
+    margin: 10px;
+}
+
+.logo {
+    color: white;
+    background-color: gray;
+    padding: 10px;
+}
+
+nav > ul {
+    display: flex;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-visual {
+    width: 100%;
+    max-width: 1920px;
+    height: 600px;
+    object-fit: cover;
+    /*background: #f7f7f7 url(./img/mainvisual.jpg) center center/auto no-repeat;*/
+    /*以下と同義*/
+    background-color: #f7f7f7;
+    background-image: url(./img/mainvisual.jpg);
+    background-position: center center;
+    /*background-size: auto;*/
+    background-repeat: no-repeat;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about > h2 {
+    border-bottom: 1px solid #222222;
+}
+
+.about-content-img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column; /** PCとここだけ違う **/
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content-text {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.about-content-name {
+}
+
+.about-content-description {
+}
+
+.bicycle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bicycle > h2 {
+    border-bottom: 1px solid #222222;
+}
+
+.bicycle-img {
+    display: flex;
+    flex-direction: column;
+}
+
+.bicycle-caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bicycle-title {
+    margin: 5px;
+}
+
+/* 600px以上 */
+@media screen and (min-width: 600px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    nav > ul > li {
+        display: flex;
+        padding: 10px;
+    }
+
+    .about-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bicycle-images {
+        display: flex;
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .bicycle-images img {
+        width: 200px;
+        margin: 10px;
+    }
+}
+
+/* 600px未満 */
+@media screen and (max-width: 600px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    nav > ul > li {
+        display: flex;
+        padding: 10px;
+        font-size: 25px; /** PCとここだけ違う **/
+    }
+
+    .bicycle-images {
+        display: flex;
+        flex-direction: column;  /** PCとここだけ違う **/
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .bicycle-images img {
+        width: 100%;  /** PCとここだけ違う **/
+        margin: 10px;
+    }
+}

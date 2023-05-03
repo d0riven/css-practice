@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+$text-color-gray: rgba(0, 0, 0, 0.54);
+
 // css/layout/_header.scss
 .l-header {
   position: relative;
@@ -115,7 +117,7 @@
   height: 38px;
   padding: 0 16px;
   font-size: 12px;
-  color: rgba(0, 0, 0, 0.54);
+  color: $text-color-gray;
   line-height: 40px;
   box-sizing: content-box;
 }
@@ -132,7 +134,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  color: rgba(0, 0, 0, 0.54);
+  color: $text-color-gray;
   font: 12px/14px "Roboto", "Helvetica Neue", Arial, sans-serif;
   margin: 10px;
 }
@@ -166,7 +168,7 @@
 }
 
 .c-option-item__category {
-  color: rgba(0, 0, 0, 0.54);
+  color: $text-color-gray;
 }
 
 // css/component/_knowledge-panel.scss
@@ -258,7 +260,7 @@
   justify-content: space-between;
   align-items: flex-start;
   padding: 10px 0;
-  color: rgba(0, 0, 0, 0.54);
+  color: $text-color-gray;
 }
 
 .c-query-ad__item-value {
