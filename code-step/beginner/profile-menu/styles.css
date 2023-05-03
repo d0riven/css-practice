@@ -1,9 +1,9 @@
 /* 共通 */
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
 }
 
 header > div {
@@ -28,10 +28,10 @@ main {
 }
 
 .main-visual {
-    height: 600px;
-    object-fit: fill;
     width: 100%;
     max-width: 1920px;
+    height: 600px;
+    object-fit: cover;
     /*background: #f7f7f7 url(./img/mainvisual.jpg) center center/auto no-repeat;*/
     /*以下と同義*/
     background-color: #f7f7f7;
@@ -103,40 +103,14 @@ main {
     margin: 5px;
 }
 
-/* 600px未満 */
-@media screen and (max-width: 600px) {
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    nav > ul > li {
-        display: flex;
-        padding: 10px;
-        font-size: 25px; /** PCとここだけ違う **/
-    }
-
-    .bicycle-images {
-        display: flex;
-        flex-direction: column;  /** PCとここだけ違う **/
-        justify-content: center;
-        padding-left: 0;
-    }
-
-    .bicycle-images img {
-        width: 100%;  /** PCとここだけ違う **/
-        margin: 10px;
-    }
-}
-
 /* 600px以上 */
 @media screen and (min-width: 600px) {
     header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 800px; /** スマホとここだけ違う **/
+        max-width: 960px;
+        margin: 0 auto;
     }
 
     nav > ul > li {
@@ -158,6 +132,35 @@ main {
 
     .bicycle-images img {
         width: 200px;
+        margin: 10px;
+    }
+}
+
+/* 600px未満 */
+@media screen and (max-width: 600px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    nav > ul > li {
+        display: flex;
+        padding: 10px;
+        font-size: 25px; /** PCとここだけ違う **/
+    }
+
+    .bicycle-images {
+        display: flex;
+        flex-direction: column;  /** PCとここだけ違う **/
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .bicycle-images img {
+        width: 100%;  /** PCとここだけ違う **/
         margin: 10px;
     }
 }
