@@ -7,12 +7,14 @@ body {
     background-color: whitesmoke;
 }
 
-.main {
-    width: 1000px;
+/* サイト全体の幅 */
+.container {
+    max-width: 1000px;
 }
 
+/* コンテンツの幅 */
 .content {
-    width: 600px;
+    max-width: 600px;
 }
 
 /*-------------------------------
@@ -21,8 +23,11 @@ body {
 #header {
     display: flex;
 }
-#header h2 {
-    color: gray;
+#header img {
+    max-width: 160px;
+}
+#header a {
+    display: block;
 }
 
 /*-------------------------------
@@ -75,16 +80,20 @@ body {
 }
 
 #detail .book-info {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 16px 0;
     border-top: 1px solid #cccccc;
     border-bottom: 1px solid #cccccc;
-    padding-left: 0;
 }
 
-#detail .book-info li {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    /*margin-right: 50px;*/ /* これ入れると表示が崩れる。フォントの問題？ */
+#detail .book-info dt {
+    width: 25%;
+}
+
+#detail .book-info dd {
+    width: 75%;
+    margin-inline-start: 0;
 }
 
 /*-------------------------------
