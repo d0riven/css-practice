@@ -1,0 +1,120 @@
+/* PCベース */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+/* サイト全体の幅 */
+.container {
+    max-width: 1000px;
+}
+
+/* コンテンツの幅 */
+.content {
+    max-width: 600px;
+}
+
+/*-------------------------------
+ header
+--------------------------------*/
+#header {
+    display: flex;
+}
+#header img {
+    max-width: 160px;
+}
+#header a {
+    display: block;
+}
+
+/*-------------------------------
+ main visual
+--------------------------------*/
+#mainvisual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+/*-------------------------------
+ index
+--------------------------------*/
+#index {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    margin-bottom: 50px;
+}
+
+#index li {
+    margin-bottom: 20px;
+}
+
+/*-------------------------------
+ detail
+--------------------------------*/
+#detail {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#detail .detail-content {
+    display: flex;
+}
+
+#detail .detail-content > img {
+    width: 45%;
+}
+
+#detail .detail-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    width: 45%;
+}
+
+#detail .book-info {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 16px 0;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+}
+
+#detail .book-info dt {
+    width: 25%;
+}
+
+#detail .book-info dd {
+    width: 75%;
+    margin-inline-start: 0;
+}
+
+/*-------------------------------
+ footer
+--------------------------------*/
+#footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+/* SP調整 */
+@media screen and (max-width: 1024px) {
+    #detail .detail-content {
+        flex-direction: column;
+    }
+    #detail .detail-content img {
+        width: 100%;
+    }
+    #detail .detail-text {
+        width: 100%;
+        margin-left: 0px;
+    }
+}
