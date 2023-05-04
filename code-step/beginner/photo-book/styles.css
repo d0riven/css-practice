@@ -1,0 +1,96 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+.main {
+    width: 1000px;
+}
+
+.content {
+    width: 600px;
+}
+
+/*-------------------------------
+ header
+--------------------------------*/
+#header {
+    display: flex;
+}
+#header h2 {
+    color: gray;
+}
+
+/*-------------------------------
+ main visual
+--------------------------------*/
+#mainvisual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+/*-------------------------------
+ index
+--------------------------------*/
+#index {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    margin-bottom: 50px;
+}
+
+#index li {
+    margin-bottom: 20px;
+}
+
+/*-------------------------------
+ detail
+--------------------------------*/
+#detail {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#detail .detail-content {
+    display: flex;
+}
+
+#detail .detail-content > img {
+    width: 270px;
+}
+
+#detail .detail-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+    width: 270px;
+}
+
+#detail .book-info {
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    padding-left: 0;
+}
+
+#detail .book-info li {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    /*margin-right: 50px;*/ /* これ入れると表示が崩れる。フォントの問題？ */
+}
+
+/*-------------------------------
+ footer
+--------------------------------*/
+#footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
