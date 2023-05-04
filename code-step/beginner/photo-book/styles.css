@@ -1,3 +1,4 @@
+/* PCベース */
 body {
     display: flex;
     flex-direction: column;
@@ -63,14 +64,14 @@ body {
 }
 
 #detail .detail-content > img {
-    width: 270px;
+    width: 45%;
 }
 
 #detail .detail-text {
     display: flex;
     flex-direction: column;
-    margin-left: 60px;
-    width: 270px;
+    margin-left: 10%;
+    width: 45%;
 }
 
 #detail .book-info {
@@ -93,4 +94,18 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 100px;
+}
+
+/* SP調整 */
+@media screen and (max-width: 1024px) {
+    #detail .detail-content {
+        flex-direction: column;
+    }
+    #detail .detail-content img {
+        width: 100%;
+    }
+    #detail .detail-text {
+        width: 100%;
+        margin-left: 0px;
+    }
 }
