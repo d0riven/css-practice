@@ -109,6 +109,8 @@ main {
     align-items: center;
     background-color: var(--bg-color);
     padding: 40px;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 #detail .inner .content {
@@ -139,9 +141,9 @@ main {
 #detail .inner .texts {
     display: flex;
     flex-direction: column;
-    justify-inner: center;
     width: 60%;
-    margin-left: 40px;
+    padding-left: 40px;
+    border-left: 1px solid black;
 }
 
 /*------------------------
@@ -151,4 +153,48 @@ main {
     display: flex;
     justify-content: center;
     margin-top: 100px;
+}
+
+/*---------------------------
+SP
+* image-listを2から1カラムに
+* detailのcontentの並びを横から縦にする
+--------------------------- */
+@media screen and (max-width: 1024px) {
+    /*------------------------
+     image-list
+    -------------------------*/
+    #image-list ul {
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    #image-list ul li {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    #image-list ul li img {
+        width: 100%;
+    }
+
+    /*------------------------
+     detail
+    -------------------------*/
+    #detail .content {
+        flex-direction: column;
+    }
+
+    #detail .inner .book-info {
+        width: 100%;
+    }
+
+    #detail .inner .texts {
+        padding-left: 0;
+        width: 100%;
+        border-top: 1px solid black;
+        border-left: 0px;
+    }
 }
