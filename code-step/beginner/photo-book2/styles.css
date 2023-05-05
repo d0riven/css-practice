@@ -2,11 +2,27 @@
     --bg-color: #f5f5f5;
 }
 
+html {
+    font-size: 100%;
+}
+
 body {
-    display: flex;
-    /** TODO: bodyでこんなことしないで中央寄せする方法を答えを見て理解する */
-    flex-direction: column;
-    align-items: center;
+    color: #333;
+    font-size: 0.875rem;
+    box-sizing: border-box;
+    /** bodyでこんなことしないで中央寄せする方法を答えを見て理解する
+        => containerにmargin 0 auto;をつければ解決した */
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*align-items: center;*/
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
 }
 
 main {
@@ -15,10 +31,12 @@ main {
 .container {
     /* TODO: max-widthとwidthの場合のflexboxの挙動の差がよくわかっていない */
     max-width: 1000px;
+    margin: 0 auto;
 }
 
 .inner {
     max-width: 800px;
+    margin: 0 auto;
 }
 
 /*------------------------
@@ -43,15 +61,9 @@ main {
 -------------------------*/
 #index {
     display: flex;
-    justify-content: center;
-}
-
-#index .inner {
-    display: flex;
     flex-direction: column;
     align-items: center;
     background-color: var(--bg-color);
-    width: 100%;
     padding-bottom: 20px;
 }
 
@@ -80,18 +92,12 @@ main {
 #image-list ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     padding-inline-start: 0;
 }
 
 #image-list ul li {
-    list-style: none;
-    width: 40%;
-    margin-right: 40px;
-}
-
-#image-list ul li img {
-    width: 350px;
+    width: 49%;
 }
 
 /*------------------------
@@ -99,49 +105,42 @@ main {
 -------------------------*/
 #detail {
     display: flex;
-    justify-content: center;
-}
-
-#detail .inner {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     background-color: var(--bg-color);
     padding: 40px;
     box-sizing: border-box;
-    width: 100%;
 }
 
-#detail .inner .content {
+#detail .content {
     display: flex;
     justify-content: center;
 }
 
-#detail .inner .book-info {
+#detail .book-info {
     display: flex;
     align-items: center;
-    width: 30%;
+    width: 35%;
     margin-right: 40px;
 }
 
-#detail .inner .book-info dl {
+#detail .book-info dl {
     /*display: flex;*/
 }
 
-#detail .inner .book-info dt {
+#detail .book-info dt {
     font-weight: bold;
 }
 
-#detail .inner .book-info dd {
+#detail .book-info dd {
     margin-inline-start: 0;
     padding-bottom: 10px;
 }
 
-#detail .inner .texts {
+#detail .texts {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 65%;
     padding-left: 40px;
     border-left: 1px solid black;
 }
@@ -187,14 +186,14 @@ SP
         flex-direction: column;
     }
 
-    #detail .inner .book-info {
+    #detail .book-info {
         width: 100%;
     }
 
-    #detail .inner .texts {
+    #detail .texts {
         padding-left: 0;
         width: 100%;
         border-top: 1px solid black;
-        border-left: 0px;
+        border-left: none;
     }
 }
