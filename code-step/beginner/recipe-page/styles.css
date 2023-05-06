@@ -95,3 +95,19 @@ footer .sns-links a {
     color: #222222;
     margin: 0 10px;
 }
+
+/* SPは画像とレシピを縦に並べる */
+@media screen and (max-width: 834px){
+    #content {
+        flex-direction: column;
+    }
+    #content .visual {
+        width: 100%;
+    }
+    #content .visual img {
+        height: auto;
+    }
+    #content .recipe {
+        width: 100%;
+    }
+}
