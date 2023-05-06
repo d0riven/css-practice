@@ -62,7 +62,7 @@ li {
     padding-bottom: 40px;
     width: 100%;
 }
-#image-list ul li {
+#image-list li {
     width: 100%;
 }
 #image-list li img {
@@ -92,4 +92,11 @@ footer {
 footer .links a {
     padding: 0 10px;
     color: black;
+}
+
+/* SPの場合は3枚の画像を縦に並べる */
+@media screen and (max-width: 834px) {
+    #image-list ul {
+        flex-direction: column;
+    }
 }
