@@ -11,3 +11,7 @@ make setup
 ```
 
 #### 学びメモ
+
+* aspect-ratioを使うと比率を保ちながら長さを変えられる
+* object-fit: coverでも同様に比率を保てる
+* text-decoration: noneでaタグの下線を消せる
