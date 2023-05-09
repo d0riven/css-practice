@@ -37,6 +37,8 @@ header .links {
 }
 header .links a {
     margin: 0 10px;
+    text-decoration: none;
+    color: #222222;
 }
 
 /*------------
@@ -157,6 +159,11 @@ header .links a {
     cursor: pointer;
 }
 
+#contact form input[type="submit"]:hover {
+    background: #d0d0d0;
+    color: #000;
+}
+
 /*--------------
  footer
 ---------------*/
@@ -169,4 +176,23 @@ footer {
 
 footer p {
     font-size: 10px;
+}
+
+/* SPはWorksの画像とNewsの日付とタイトルが縦並びになる */
+@media screen and (max-width: 600px) {
+    #works ul {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    #works li {
+        width: 100%;
+    }
+
+    #news table th {
+        border-bottom: none;
+    }
+
+    #news table th,td {
+        display: block;
+    }
 }
