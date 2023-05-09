@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+}
+
+body {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+ul {
+    padding-inline-start: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.inner {
+    max-width: 960px;
+    margin: auto;
+}
+/*------------
+ header
+ ------------*/
+header {
+    display: flex;
+}
+header h1 {
+    flex-grow: 1;
+}
+header .links {
+    display: flex;
+    align-items: center;
+}
+header .links a {
+    margin: 0 10px;
+}
+
+/*------------
+ main visual
+ ------------*/
+#mainvisual {
+    margin-top: 50px;
+}
+#mainvisual img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+}
+
+/*--------------
+ about
+---------------*/
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+#about .access {
+    white-space: pre-line;
+}
+
+/*--------------
+ works
+---------------*/
+#works {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#works ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#works li {
+    width: 33%;
+    padding: 10px;
+}
+
+#works li img {
+    width: 100%;
+}
+
+/*--------------
+ news
+---------------*/
+#news {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+#news table {
+    border-top: 1px solid #757575;
+    border-collapse: collapse;
+}
+
+#news table th {
+    width: 20%;
+    padding-right: 50px;
+}
+
+#news table th,td {
+    border-bottom: 1px solid #757575;
+    padding: 10px 0;
+}
+
+/*--------------
+ contact
+---------------*/
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+#contact form {
+    width: 100%;
+    margin-top: 40px;
+}
+
+#contact form div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+#contact form label {
+    display: inline;
+    width: 15%;
+}
+
+#contact form input[type~="text"],textarea {
+    width: 85%;
+    padding: 10px;
+}
+
+#contact form input[type="submit"] {
+    display: block;
+    margin: 50px auto 0 auto;
+    padding: 10px 70px;
+
+    border: none;
+    outline: none;
+    background: #2f2f2f;
+    color: #fff;
+    box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/*--------------
+ footer
+---------------*/
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: #222222;
+    color: white;
+}
+
+footer p {
+    font-size: 10px;
+}
