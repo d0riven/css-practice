@@ -1,0 +1,32 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  background-color: white;
+  padding: 20px 0;
+  top: 0;
+
+  h1 {
+    padding-left: 10px;
+    img {
+      width: 75%;
+    }
+  }
+
+  div.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 50px;
+    width: 50px;
+    span {
+      display: block;
+      height: 3px;
+      width: 35px;
+      background-color: #757575;
+      margin: 3px;
+    }
+  }
+}

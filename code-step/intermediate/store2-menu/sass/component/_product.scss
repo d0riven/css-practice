@@ -1,0 +1,13 @@
+.product_list {
+  display: flex;
+  flex-wrap: wrap;
+
+  .product {
+    width: calc(1280px/4);
+    padding: 10px;
+
+    p {
+      font-size: 12px;
+    }
+  }
+}

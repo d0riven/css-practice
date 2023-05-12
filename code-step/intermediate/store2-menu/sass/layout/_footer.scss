@@ -1,0 +1,19 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 150px;
+
+  ul {
+    display: flex;
+    li {
+      margin-left: 20px;
+      a {
+        text-decoration: none;
+        font-size: 12px;
+      }
+    }
+  }
+  .copyright {
+    font-size: 11px;
+  }
+}
