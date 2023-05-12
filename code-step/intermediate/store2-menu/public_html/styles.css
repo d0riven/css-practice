@@ -138,7 +138,7 @@ li {
   flex-wrap: wrap;
 }
 .product_list .product {
-  width: 320px;
+  width: 25%;
   padding: 10px;
 }
 .product_list .product p {
@@ -151,6 +151,13 @@ li {
   margin: 20px;
 }
 
+.pager ol {
+  display: flex;
+}
+.pager ol li {
+  padding: 20px;
+}
+
 .container {
   max-width: 1360px;
   padding: 0 40px;
@@ -160,7 +167,8 @@ li {
 footer {
   display: flex;
   justify-content: space-between;
-  margin-top: 150px;
+  margin-top: 120px;
+  padding: 20px;
 }
 footer ul {
   display: flex;
